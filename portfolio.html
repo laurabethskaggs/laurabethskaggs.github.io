@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Laura Skaggs Bowling</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
   </head>
   <body>
     <!-- Navigation bar -->
@@ -20,6 +20,7 @@
       </ul>
     </nav>
 
+    <!-- Main content -->
     <main class="container">
       <h1>Portfolio</h1>
       <p>
@@ -29,11 +30,18 @@
       </p>
 
       <div class="card-grid">
-        <!-- Card 1: Neocities Resume -->
+        <!-- Card 1: Resume Site -->
         <div class="card">
           <div class="card-content">
             <h3>HTML Resume Site</h3>
-            <iframe src="https://laurabmbaconsulting.neocities.org" width="100%" height="250" style="border:none;"></iframe>
+            <iframe 
+              src="https://laurabmbaconsulting.neocities.org" 
+              width="100%" 
+              height="250" 
+              frameborder="0" 
+              loading="lazy" 
+              style="border: none;">
+            </iframe>
             <p>
               This isn’t just a resume — it’s a live showcase of my design, development, and storytelling capabilities.
             </p>
@@ -45,7 +53,14 @@
         <div class="card">
           <div class="card-content">
             <h3>Webinar Training Deck</h3>
-           <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSa1TZLNI7n01HgCMwEyldK8oNx_NrdQONcSnnP6dHl_OVLOvAM1KlGPqUmhwPUX24nk7B8GwB5SySw/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="100%" height="250" loading="lazy" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            <iframe 
+              src="https://docs.google.com/presentation/d/e/2PACX-1vSa1TZLNI7n01HgCMwEyldK8oNx_NrdQONcSnnP6dHl_OVLOvAM1KlGPqUmhwPUX24nk7B8GwB5SySw/pubembed?start=false&loop=true&delayms=3000" 
+              width="100%" 
+              height="250" 
+              frameborder="0" 
+              loading="lazy" 
+              allowfullscreen>
+            </iframe>
             <p>
               A sample training presentation, anonymized and designed to explain AI workflows clearly to non-technical audiences.
             </p>
@@ -53,36 +68,37 @@
           </div>
         </div>
 
-<!-- Card 3: Tableau Dashboard -->
-<div class="card">
-  <div class="card-content">
-    <h3>Educational Data Dashboard</h3>
-    <iframe 
-      src="https://public.tableau.com/views/Datatest744/StoryofEducationalAttainmenttoLivelihood?:showVizHome=no&:embed=true" 
-      frameborder="0" 
-      width="100%" 
-      height="250" 
-      loading="lazy" 
-      allowfullscreen="true">
-    </iframe>
-    <p>
-      A Tableau dashboard exploring the relationship between education levels and economic outcomes across populations.
-    </p>
-    <a href="https://public.tableau.com/views/Datatest744/StoryofEducationalAttainmenttoLivelihood" 
-       target="_blank" 
-       rel="noopener noreferrer">
-       View full dashboard
-    </a>
-  </div>
-</div>
+        <!-- Card 3: Tableau Dashboard -->
+        <div class="card">
+          <div class="card-content">
+            <h3>Educational Data Dashboard</h3>
+            <iframe 
+              src="https://public.tableau.com/views/Datatest744/StoryofEducationalAttainmenttoLivelihood?:showVizHome=no&:embed=true" 
+              width="100%" 
+              height="250" 
+              frameborder="0" 
+              loading="lazy" 
+              allowfullscreen>
+            </iframe>
+            <p>
+              A Tableau dashboard exploring the relationship between education levels and economic outcomes across populations.
+            </p>
+            <a href="https://public.tableau.com/views/Datatest744/StoryofEducationalAttainmenttoLivelihood" target="_blank" rel="noopener noreferrer">View full dashboard</a>
+          </div>
+        </div>
 
-
-
-        <!-- Card 4: Placeholder -->
+        <!-- Card 4: LLM Task Analysis -->
         <div class="card">
           <div class="card-content">
             <h3>LLM Task Analysis</h3>
-            <iframe src="#" width="100%" height="250" style="background:#f5f5f5; border:none;">[LLM QA Work Summary]</iframe>
+            <iframe 
+              src="#" 
+              width="100%" 
+              height="250" 
+              frameborder="0" 
+              style="background: #f5f5f5; border: none;">
+              [LLM QA Work Summary]
+            </iframe>
             <p>
               Overview of reinforcement learning evaluation and prompt testing work performed for an enterprise AI platform.
             </p>
@@ -90,20 +106,39 @@
           </div>
         </div>
 
-        <!-- Card 5: Placeholder -->
+        <!-- Card 5: LaFACTS Model -->
         <div class="card">
           <div class="card-content">
             <h3>LaFACTS Classification Model</h3>
-            <iframe src="#" width="100%" height="250" style="background:#f5f5f5; border:none;">[Redacted Project Deck]</iframe>
+            <iframe 
+              src="#" 
+              width="100%" 
+              height="250" 
+              frameborder="0" 
+              style="background: #f5f5f5; border: none;">
+              [Redacted Project Deck]
+            </iframe>
             <p>
               A sanitized view of a legacy-to-modern classification migration project, anonymized for compliance with NDA.
             </p>
             <a href="#" target="_blank" rel="noopener noreferrer">Coming soon</a>
           </div>
         </div>
+      </div>
+    </main>
 
-        <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.scrollTo(0, 0);
-  });
-</script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Laura Skaggs Bowling. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scroll fix -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </body>
+</html>
