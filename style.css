@@ -1,23 +1,13 @@
-/*
- * Global styles for Laura Skaggs Bowling’s GitHub Pages portfolio.
- *
- * The palette centers on purple tones (#4B0082) paired with
- * light neutrals for a modern, professional look. Layouts
- * rely on simple flexbox and max‑width constraints to keep
- * content centered and readable on a variety of devices.
- */
-
-/* Reset margins and apply base typography */
+/* Global styles for Laura Skaggs Bowling’s GitHub Pages portfolio */
 body {
   margin: 0;
   padding: 0;
-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #ffffff;
+  background-color: #FFFBF5;
 }
 
-/* Constrain content widths */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -27,7 +17,7 @@ font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, san
 
 /* Navigation bar */
 .navbar {
-  background-color: #4B0082; /* primary purple */
+  background-color: #674188;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -69,9 +59,9 @@ font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, san
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Hero section */
+/* Hero */
 .hero {
-  background-color: #EDE7F6; /* light purple tint */
+  background-color: #F7EFE5;
   padding: 4rem 0;
   text-align: center;
 }
@@ -79,7 +69,7 @@ font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, san
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #4B0082;
+  color: #674188;
 }
 
 .hero p {
@@ -90,31 +80,85 @@ font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, san
   margin-right: auto;
 }
 
+/* Enhanced Hero (gradient) */
+.hero-enhanced {
+  position: relative;
+  background: linear-gradient(135deg, #C3ACD0, #674188);
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-enhanced .hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.hero-enhanced .hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-enhanced h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #FFFBF5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-enhanced h1 span {
+  color: #F7EFE5;
+}
+
+.hero-enhanced p {
+  font-size: 1.25rem;
+  color: #FFFBF5;
+  max-width: 700px;
+  margin: 0.5rem auto 1.5rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
 .button {
   display: inline-block;
-  background-color: #4B0082;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
+  background: #FFFBF5;
+  color: #674188;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
 }
 
 .button:hover {
-  background-color: #5e35b1;
+  background: #C3ACD0;
+  color: #fff;
 }
 
 /* Section headings */
 h1, h2, h3 {
-  color: #4B0082;
+  color: #674188;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-/* About preview section */
+/* About Preview */
 .about-preview {
-  background-color: #f5f5f5;
+  background-color: #F7EFE5;
   padding: 3rem 0;
   text-align: center;
 }
@@ -125,7 +169,7 @@ h1, h2, h3 {
 }
 
 .link {
-  color: #4B0082;
+  color: #674188;
   text-decoration: none;
   font-weight: 500;
 }
@@ -134,7 +178,7 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Cards for portfolio items */
+/* Cards */
 .card-grid {
   display: grid;
   gap: 2rem;
@@ -143,7 +187,7 @@ h1, h2, h3 {
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #FFFBF5;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -168,7 +212,7 @@ h1, h2, h3 {
 .card-content h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #4B0082;
+  color: #674188;
 }
 
 .card-content p {
@@ -178,7 +222,7 @@ h1, h2, h3 {
 
 .card-content a {
   align-self: flex-start;
-  background-color: #4B0082;
+  background-color: #674188;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -188,10 +232,11 @@ h1, h2, h3 {
 }
 
 .card-content a:hover {
-  background-color: #5e35b1;
+  background-color: #C3ACD0;
+  color: #fff;
 }
 
-/* Resume page */
+/* Resume */
 .resume-container {
   margin-top: 2rem;
   display: flex;
@@ -205,7 +250,7 @@ h1, h2, h3 {
   border: none;
 }
 
-/* Contact form */
+/* Contact Form */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -213,99 +258,3 @@ h1, h2, h3 {
   flex-direction: column;
   gap: 1rem;
 }
-
-.contact-form label {
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  align-self: flex-start;
-  background-color: #4B0082;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #5e35b1;
-}
-
-/* Footer */
-.footer {
-  background-color: #4B0082;
-  color: #ffffff;
-  padding: 1rem 0;
-  text-align: center;
-  margin-top: 3rem;
-}
-
-/* === HERO SECTION === */
-.hero-enhanced {
-  position: relative;
-  background: linear-gradient(135deg, #512da8, #7e57c2);
-  color: #fff;
-  padding: 6rem 0;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero-enhanced .hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.15);
-  z-index: 1;
-}
-
-.hero-enhanced .hero-content {
-  position: relative;
-  z-index: 2;
-  animation: fadeInUp 1s ease forwards;
-}
-
-.hero-enhanced h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.hero-enhanced h1 span {
-  color: #ffe082;
-}
-
-.hero-enhanced p {
-  font-size: 1.25rem;
-  color: #f0f0f0;
-  max-width: 700px;
-  margin: 0.5rem auto 1.5rem;
-  line-height: 1.6;
-}
-
-.button {
-  display: inline-block;
-  background: #ffffff;
-  color: #4B0082;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-decoration: none;
-  }
