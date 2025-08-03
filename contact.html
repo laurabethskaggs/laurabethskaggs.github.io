@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Laura Beth Skaggs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <div class="logo">Laura Beth Skaggs</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <h1>Contact Me</h1>
+      <p>
+        I'd love to hear from you! Whether you have a question about my work,
+        want to collaborate on a project or just want to say hello, feel free
+        to reach out via the form below. You can also connect with me on
+        LinkedIn.
+      </p>
+
+      <form
+        class="contact-form"
+        action="mailto:your.email@example.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p style="margin-top: 2rem;">
+        Or connect with me on
+        <a
+          class="link"
+          href="https://www.linkedin.com/in/laura-skaggs78/"
+          target="_blank"
+          >LinkedIn</a
+        >.
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Laura Beth Skaggs. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
