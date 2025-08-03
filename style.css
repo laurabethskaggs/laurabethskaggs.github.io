@@ -198,6 +198,17 @@ h1, h2, h3 {
   flex-direction: column;
 }
 
+.card iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+/* Remove focus outline on iframe */
+iframe:focus {
+  outline: none;
+}
+
 .card img {
   width: 100%;
   height: 180px;

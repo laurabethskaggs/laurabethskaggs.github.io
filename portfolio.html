@@ -35,7 +35,8 @@
           <div class="card-content">
             <h3>HTML Resume Site</h3>
             <iframe 
-              src="https://laurabmbaconsulting.neocities.org" 
+              data-src="https://laurabmbaconsulting.neocities.org" 
+              sandbox="allow-scripts allow-same-origin"
               width="100%" 
               height="250" 
               frameborder="0" 
@@ -54,7 +55,8 @@
           <div class="card-content">
             <h3>Webinar Training Deck</h3>
             <iframe 
-              src="https://docs.google.com/presentation/d/e/2PACX-1vSa1TZLNI7n01HgCMwEyldK8oNx_NrdQONcSnnP6dHl_OVLOvAM1KlGPqUmhwPUX24nk7B8GwB5SySw/pubembed?start=false&loop=true&delayms=3000" 
+              data-src="https://docs.google.com/presentation/d/e/2PACX-1vSa1TZLNI7n01HgCMwEyldK8oNx_NrdQONcSnnP6dHl_OVLOvAM1KlGPqUmhwPUX24nk7B8GwB5SySw/pubembed?start=false&loop=true&delayms=3000" 
+              sandbox="allow-scripts allow-same-origin"
               width="100%" 
               height="250" 
               frameborder="0" 
@@ -72,13 +74,15 @@
         <div class="card">
           <div class="card-content">
             <h3>Educational Data Dashboard</h3>
-            <iframe 
-              src="https://public.tableau.com/views/Datatest744/StoryofEducationalAttainmenttoLivelihood?:showVizHome=no&:embed=true" 
-              width="100%" 
-              height="250" 
-              frameborder="0" 
-              loading="lazy" 
-              allowfullscreen>
+           <div style="pointer-events: none;">
+           <iframe 
+            src="https://public.tableau.com/views/Datatest744/StoryofEducationalAttainmenttoLivelihood?:embed=true&:display_count=no&:toolbar=no" 
+            width="100%" 
+            height="250" 
+            frameborder="0" 
+            allowfullscreen
+            loading="lazy"
+            tabindex="-1">
             </iframe>
             <p>
               A Tableau dashboard exploring the relationship between education levels and economic outcomes across populations.
@@ -92,7 +96,8 @@
           <div class="card-content">
             <h3>LLM Task Analysis</h3>
             <iframe 
-              src="#" 
+              data-src="#" 
+              sandbox="allow-scripts allow-same-origin"
               width="100%" 
               height="250" 
               frameborder="0" 
@@ -111,7 +116,8 @@
           <div class="card-content">
             <h3>LaFACTS Classification Model</h3>
             <iframe 
-              src="#" 
+              data-src="#" 
+              sandbox="allow-scripts allow-same-origin"
               width="100%" 
               height="250" 
               frameborder="0" 
@@ -124,6 +130,24 @@
             <a href="#" target="_blank" rel="noopener noreferrer">Coming soon</a>
           </div>
         </div>
+        <!-- Card 6: AI Chatbot -->
+        <div class="card">  
+          <div class="card-content">
+            <h3>AI Chatbot Project</h3>
+            <iframe 
+              data-src="#" 
+              sandbox="allow-scripts allow-same-origin"
+              width="100%" 
+              height="250" 
+              frameborder="0" 
+              style="background: #f5f5f5; border: none;">
+              [Chatbot Demo]
+            </iframe>
+            <p>
+              A demonstration of an AI chatbot designed to assist users with common queries and tasks.
+            </p>
+            <a href="#" target="_blank" rel="noopener noreferrer">Coming soon</a>
+          </div>
       </div>
     </main>
 
@@ -135,10 +159,15 @@
     </footer>
 
     <!-- Scroll fix -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        window.scrollTo(0, 0);
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      const lazyFrames = document.querySelectorAll('iframe[data-src]');
+      lazyFrames.forEach(iframe => {
+        iframe.setAttribute('src', iframe.getAttribute('data-src'));
       });
-    </script>
+    }, 1000); // delay 0.5s
+  });
+</script>
   </body>
 </html>
