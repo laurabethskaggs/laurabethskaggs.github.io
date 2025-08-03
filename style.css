@@ -180,17 +180,18 @@ h1, h2, h3 {
 
 /* Cards */
 .card-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  margin-top: 2rem;
 }
 
 .card {
-  background-color: #FFFBF5;
+  flex: 0 0 48%; /* two cards per row with spacing */
+  background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   display: flex;
   flex-direction: column;
